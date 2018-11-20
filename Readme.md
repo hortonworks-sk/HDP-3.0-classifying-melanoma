@@ -2,7 +2,7 @@
 
 <br><b>To Get the data:</b>
 
-<br>&nbsp;&nbsp;&nbsp;&nbsp;1) Clone Repo <a href="https://github.com/vgupta-ai/ISIC-Dataset-Downloader/blob/master/isicDatasetDownloader.py">ISIC-Dataset-Downloader</a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;1) Clone Repo <a href="https://github.com/vgupta-ai/ISIC-Dataset-Downloader">ISIC-Dataset-Downloader</a>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;3) <code>python ISIC-Dataset-Downloader/downloadImageMetaData.py</code>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;this will download images into directories named after the data set id (e.g. 5627f5f69fc3c132be08d852)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;    /malignant
