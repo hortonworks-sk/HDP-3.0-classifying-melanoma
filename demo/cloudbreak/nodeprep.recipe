@@ -9,5 +9,8 @@ mkdir /demo
 cd /demo
 git clone https://github.com/hortonworks-sk/HDP-3.0-classifying-melanoma.git
 
+mv HDP-3.0-classifying-melanoma/demo/* /demo
+rm -rf HDP-3.0-classifying-melanoma
+
 docker build /demo/docker -t centos/tensorflow:melanoma 
 

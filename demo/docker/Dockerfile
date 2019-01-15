@@ -87,7 +87,7 @@ RUN opt/conda/bin/pip install scipy --upgrade
 RUN mkdir /demo
 RUN cd /demo
 RUN git clone https://github.com/hortonworks-sk/HDP-3.0-classifying-melanoma.git
-RUN mv HDP-3.0-classifying-melanoma/demo/. /demo
+RUN mv HDP-3.0-classifying-melanoma/demo/* ./
 RUN rm -rf HDP-3.0-classifying-melanoma
 
 ######################################################################################################
@@ -96,6 +96,6 @@ RUN rm -rf HDP-3.0-classifying-melanoma
 #
 ######################################################################################################
 
-ADD assets /assets
+
 
 #CMD source /root/.bashrc; cd /spark; /zeppelin/bin/zeppelin-daemon.sh start; superset runserver
