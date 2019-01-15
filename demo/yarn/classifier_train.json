@@ -1,0 +1,26 @@
+{
+  "name": "tensortrain-service",
+  "version": "1.0.0",
+  "description": "train cnn",
+  "components" :
+    [
+      {
+        "name": "tensorboard",
+        "number_of_containers": 1,
+        "artifact": {
+          "id": "centos/tensorflow",
+          "type": "DOCKER"
+        },
+        "launch_command": "/opt/conda/bin/python,/demo/models/classifier.py",
+        "resource": {
+          "cpus": 1,
+          "memory": "256"
+        },
+        "configuration": {
+          "env": {
+            "YARN_CONTAINER_RUNTIME_DOCKER_RUN_OVERRIDE_DISABLE": "true"
+          }
+        }
+      }
+    ]
+}

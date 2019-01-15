@@ -1,0 +1,26 @@
+{
+  "name": "tensorboard-service",
+  "version": "1.0.0",
+  "description": "tensorboard example",
+  "components" :
+    [
+      {
+        "name": "tensorboard",
+        "number_of_containers": 1,
+        "artifact": {
+          "id": "centos/tensorboard",
+          "type": "DOCKER"
+        },
+        "launch_command": "/opt/conda/bin/tensorboard,--logdir,/demo/training_summaries",
+        "resource": {
+          "cpus": 1,
+          "memory": "256"
+        },
+        "configuration": {
+          "env": {
+            "YARN_CONTAINER_RUNTIME_DOCKER_RUN_OVERRIDE_DISABLE": "true"
+          }
+        }
+      }
+    ]
+}

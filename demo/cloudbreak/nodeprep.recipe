@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#  Run Prior to Cluster Install 
+
+yum -y install docker
+service start docker 
+
+mkdir /demo
+cd /demo
+git clone https://github.com/hortonworks-sk/HDP-3.0-classifying-melanoma.git
+
+docker build /demo/docker -t centos/tensorflow:melanoma 
+
