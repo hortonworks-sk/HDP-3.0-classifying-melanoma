@@ -1,0 +1,55 @@
+#!/bin/bash
+
+#  Run Post Cluster Install 
+
+HOSTNAME=$(hostname --fqdn)
+
+##############################
+#  Add users
+##############################
+
+useradd user1
+usermod -aG hdfs user1
+
+useradd dockeruser
+
+
+##############################
+#  Create HDFS Directories
+##############################
+
+
+su hdfs
+hdfs dfs -mkdir /user/admin
+hdfs dfs -chown admin /user/admin
+hdfs dfs -mkdir /user/user1
+hdfs dfs -chown user1 /user/user1
+
+hdfs dfs -mkdir /data
+hdfs dfs -mkdir /data/benign
+hdfs dfs -mkdir /data/malignant
+hdfs dfs -mkdir /data/performance
+
+hdfs dfs -chmod -R 777 /data
+
+##############################
+#  Stage Data
+##############################
+
+hdfs dfs -put /demo/data/test/benign/* /data/benign
+hdfs dfs -put /demo/data/test/malignant/* /data/malignant
+
+
+##############################
+#  Set Up Zeppelin 
+##############################
+
+
+
+cd /demo/zeppelin
+
+
+curl -d "@ModelPerformance.json" -X POST http://$HOSTNAME:9995/api/notebook
+
+exit
+
