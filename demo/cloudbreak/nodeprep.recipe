@@ -37,11 +37,11 @@ wget --quiet ${ANACONDA_URL} -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
 rm ~/anaconda.sh
 
-opt/conda/bin/pip install keras
-opt/conda/bin/pip install tensorflow
-opt/conda/bin/pip install scipy --upgrade
+/opt/conda/bin/pip install keras
+/opt/conda/bin/pip install tensorflow
+/opt/conda/bin/pip install scipy --upgrade
 
-ln -sf /usr/bin/python /opt/conda/bin/python
+#ln -sf /opt/conda/bin/python2.7 /bin/python
 
 
 ######################################################################################################
@@ -52,7 +52,7 @@ ln -sf /usr/bin/python /opt/conda/bin/python
 
 
 yum -y install docker
-service start docker 
+service docker start 
 
 ######################################################################################################
 #
