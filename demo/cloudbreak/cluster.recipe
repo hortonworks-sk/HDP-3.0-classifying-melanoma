@@ -22,24 +22,24 @@ useradd dockeruser
 
 
 su hdfs
-hdfs dfs -mkdir /user/admin
-hdfs dfs -chown admin /user/admin
-hdfs dfs -mkdir /user/user1
-hdfs dfs -chown user1 /user/user1
+sudo -u hdfs hdfs dfs -mkdir /user/admin
+sudo -u hdfs hdfs dfs -chown admin /user/admin
+sudo -u hdfs hdfs dfs -mkdir /user/user1
+sudo -u hdfs hdfs dfs -chown user1 /user/user1
 
-hdfs dfs -mkdir /data
-hdfs dfs -mkdir /data/benign
-hdfs dfs -mkdir /data/malignant
-hdfs dfs -mkdir /data/performance
+sudo -u hdfs hdfs dfs -mkdir /data
+sudo -u hdfs hdfs dfs -mkdir /data/benign
+sudo -u hdfs hdfs dfs -mkdir /data/malignant
+sudo -u hdfs hdfs dfs -mkdir /data/performance
 
-hdfs dfs -chmod -R 777 /data
+sudo -u hdfs hdfs dfs -chmod -R 777 /data
 
 ##############################
 #  Stage Data
 ##############################
 
-hdfs dfs -put /demo/data/test/benign/* /data/benign
-hdfs dfs -put /demo/data/test/malignant/* /data/malignant
+sudo -u hdfs hdfs dfs -put /demo/data/test/benign/* /data/benign
+sudo -u hdfs hdfs dfs -put /demo/data/test/malignant/* /data/malignant
 
 exit
 
