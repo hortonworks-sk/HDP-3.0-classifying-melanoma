@@ -21,7 +21,6 @@ useradd dockeruser
 ##############################
 
 
-su hdfs
 sudo -u hdfs hdfs dfs -mkdir /user/admin
 sudo -u hdfs hdfs dfs -chown admin /user/admin
 sudo -u hdfs hdfs dfs -mkdir /user/user1
