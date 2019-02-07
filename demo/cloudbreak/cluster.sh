@@ -39,6 +39,7 @@ sudo -u hdfs hdfs dfs -chmod -R 777 /data
 
 sudo -u hdfs hdfs dfs -put /demo/data/test/benign/* /data/benign
 sudo -u hdfs hdfs dfs -put /demo/data/test/malignant/* /data/malignant
+sudo -u hdfs hdfs dfs -put /demo/hdfs/* /data/performance
 
 
 ##############################
