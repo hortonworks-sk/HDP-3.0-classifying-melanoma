@@ -2,10 +2,12 @@
 
 <b>Clone the repo</b>
 
-git clone 
+git clone https://github.com/hortonworks-sk/HDP-3.0-classifying-melanoma.git
 
 
 <br><b>Build the CNN:</b>
+
+cd /demo/models<br>
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp; Train a fully connected neural network classifier
 <br>&nbsp;&nbsp;&nbsp;&nbsp; 1) <code>python ./classifier.py</code>
